@@ -2,13 +2,19 @@
   "name": "vue_tutorials",
   "version": "0.1.0",
   "private": true,
+  "main": "./Server/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mariadb": "^2.5.3",
     "vue": "^3.0.0"
   },
   "devDependencies": {
