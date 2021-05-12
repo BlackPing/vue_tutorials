@@ -1,29 +1,44 @@
 <template>
-	<img alt="Vue logo" src="./assets/logo.png">
 	<div>
-		<p>{{ price }}</p>
+	<img alt="Vue logo" src="./assets/logo.png">
 		<div>
 			<p v-for="item in products" v-bind:key = "item">{{ item }}</p>
 		</div>
+		<button @click="test">버튼{{cnt}}</button>
+		<button @click="ck">버튼{{cnt}}</button>
+		<div>{{ counter }}</div>
+		<div>{{message}}</div>
 	</div>
-	<button v-on:click="test">버튼{{cnt}}</button>
 </template>
 
 <script>
 export default {
-  name: 'App',
-  data() {
+	name: 'App',
+	data() {
 		return {
+			counter: 0,
 			cnt: 0,
+			message: 'test',
 			products: ['test', 'test2', 'test3'],
 			test: () => {
 				this.products.push('test');
 				//cnt++;
 			}
+			
 		}
 	},
-  components: {
-  }
+	methods: {
+		ck: () => {
+			this.message = 'test4';
+		}
+	},
+	mounted() {
+    setInterval(() => {
+      this.counter++
+    }, 1000)
+  },
+	components: {
+	}
 }
 </script>
 
