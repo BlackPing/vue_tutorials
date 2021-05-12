@@ -1,15 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<img alt="Vue logo" src="./assets/logo.png">
+	<div>
+		<p>{{ price }}</p>
+		<div>
+			<p v-for="item in products" v-bind:key = "item">{{ item }}</p>
+		</div>
+	</div>
+	<button v-on:click="test">버튼{{cnt}}</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
+  data() {
+		return {
+			cnt: 0,
+			products: ['test', 'test2', 'test3'],
+			test: () => {
+				this.products.push('test');
+				//cnt++;
+			}
+		}
+	},
   components: {
-    HelloWorld
   }
 }
 </script>
