@@ -1,4 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.config.globalProperties.foo = 'bar';
+
+app.config.errorHandler = (err, vm, info) => {
+    console.log(err, vm, info);
+}
+app.mount('#app')

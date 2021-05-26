@@ -8,6 +8,7 @@
 		<button @click="ck">버튼{{cnt}}</button>
 		<div>{{ counter }}</div>
 		<div>{{message}}</div>
+		<div>{{this.foo}}</div>
 	</div>
 </template>
 
