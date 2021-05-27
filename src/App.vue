@@ -1,18 +1,17 @@
 <template>
 	<div>
-	<img alt="Vue logo" src="./assets/logo.png">
-		<div>
-			<p v-for="item in products" v-bind:key = "item">{{ item }}</p>
-		</div>
-		<button @click="test">버튼{{cnt}}</button>
-		<button @click="ck">버튼{{cnt}}</button>
-		<div>{{ counter }}</div>
-		<div>{{message}}</div>
-		<div>{{this.foo}}</div>
+		<img alt="Vue logo" src="./assets/logo.png">
+		<div>component test</div>
+		<tem1 />
+		<tem2 />
+		<tem3 />
 	</div>
 </template>
 
 <script>
+import tem2 from './components/tem2.vue'
+import tem3 from './components/tem3.vue'
+
 export default {
 	name: 'App',
 	data() {
@@ -39,6 +38,7 @@ export default {
     }, 1000)
   },
 	components: {
+		tem2, tem3
 	}
 }
 </script>

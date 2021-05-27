@@ -44,4 +44,5 @@ Vue 3 Snippets
 API 기반 튜토리얼 프로젝트   
 
 \< Vue3 Guide >   
-https://v3.vuejs.org/guide/introduction.html#what-is-vue-js   
+https://v3.vuejs.org/guide/introduction.html#what-is-vue-js [ 영어 ]   
+https://v3.vuejs-korea.org/guide/migration/introduction.html [ 한글 ]  
